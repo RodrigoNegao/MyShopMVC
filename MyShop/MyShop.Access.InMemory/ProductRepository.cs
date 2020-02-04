@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Caching;
 using MyShop.Core.Models;
 
-namespace MyShop.Access.InMemory
+namespace MyShop.DataAccess.InMemory
 {
     public class ProductRepository
     {
@@ -64,7 +64,7 @@ namespace MyShop.Access.InMemory
             return products.AsQueryable();
         }
 
-        public void Delete (string id)
+        public void Delete (string Id)
         {
             Product productToDelete = products.Find(p => p.Id == Id);
 

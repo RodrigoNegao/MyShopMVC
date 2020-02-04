@@ -12,7 +12,7 @@ namespace MyShop.Core.Models
         public string Id { get; set; }
         [StringLength(20)]
         public string Name { get; set; }
-        public string Descripition { get; set; }r[[]]
+        public string Descripition { get; set; }
         public decimal Price { get; set; }
         public string Category { get; set; }
         public string Image { get; set; }
