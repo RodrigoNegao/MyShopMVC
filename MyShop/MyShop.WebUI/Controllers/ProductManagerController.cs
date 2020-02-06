@@ -12,13 +12,14 @@ namespace MyShop.WebUI.Controllers
     {
         ProductRepository context;
 
-        public ProductManagerController(){
+        public ProductManagerController()
+        {
             context = new ProductRepository();
         }
         // GET: ProductManager
         public ActionResult Index()
         {
-            List<Product> products = context.Collection().ToList(); 
+            List<Product> products = context.Collection().ToList();
             return View(products);
         }
 
@@ -29,7 +30,7 @@ namespace MyShop.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create (Product product)
+        public ActionResult Create(Product product)
         {
             if (!ModelState.IsValid)
             {
