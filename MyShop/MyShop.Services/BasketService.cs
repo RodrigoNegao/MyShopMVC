@@ -10,7 +10,7 @@ using System.Web;
 
 namespace MyShop.Services
 {
-    class BasketService : IBasketService
+    public class BasketService : IBasketService
     {
         IRepository<Product> productContext;
         IRepository<Basket> basketContext;
@@ -132,7 +132,7 @@ namespace MyShop.Services
             }
         }
 
-        public BasketSummaryViewModel GetSummaryViewModel(HttpContextBase httpContext)
+        public BasketSummaryViewModel GetBacketSummary(HttpContextBase httpContext)
         {
             Basket basket = GetBasket(httpContext, false);
             BasketSummaryViewModel model = new BasketSummaryViewModel (0, 0);
